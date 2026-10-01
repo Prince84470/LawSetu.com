@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification OTP</title>
+    <style>
+        body.light {
+            --bg: #FAFAFA;
+            --card: #ffffff;
+            --primary: #111111;
+            --accent: #D4AF37;
+            --text: #1F2937;
+            --shadow: rgba(0,0,0,.08);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--card);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px var(--shadow);
+        }
+        h1 {
+            color: var(--primary);
+            text-align: center;
+        }
+        p {
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .otp-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent);
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: var(--bg);
+            border-radius: 4px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="container">
+        <h1>Email Verification</h1>
+        <p>Thank you for signing up! To complete your registration, please verify your email address using the OTP code below.</p>
+        <div class="otp-code">[OTP_CODE]</div>
+        <p>This code will expire in 10 minutes. If you did not request this verification, please ignore this email.</p>
+        <div class="footer">
+            <p>&copy; 2023 LawSetu. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

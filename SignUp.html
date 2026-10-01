@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LawSetu Sign Up</title>
+  <link rel="stylesheet" href="SignUp.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- Parent div with white bg + shadow -->
+<div class="container-fluid parent">
+  <div class="row">
+    <!-- Left section -->
+    <div class="left">
+      <img src="LawSetu/LawSetu Login.png" alt="LawSetu Logo" class="logo">
+    </div>
+    <!--Left Section END-->
+
+    <!-- Right section -->
+    <div class="right">
+      <h2>Join LawSetu Today!</h2>
+      <p>Create your account to access legal services</p>
+
+      <!-- Step 1: Email & OTP -->
+      <div id="step-email" class="form-step active">
+        <form id="emailForm">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required style="border: 1px solid black;">
+          </div>
+          <button type="submit" class="btn-primary">Send OTP</button>
+        </form>
+      </div>
+
+      <!-- Step 2: OTP Verification -->
+      <div id="step-otp" class="form-step">
+        <div class="otp-header">
+          <p>We've sent a 6-digit OTP to</p>
+          <p class="email-display" id="displayEmail"></p>
+          <button type="button" class="change-email" onclick="showStep('email')">Change</button>
+        </div>
+        <form id="otpForm">
+          <div class="form-group">
+            <label for="otp">Enter OTP</label>
+            <div class="otp-inputs">
+              <input type="text" class="otp-input" maxlength="1" required style="border: 1px solid black;">
+              <input type="text" class="otp-input" maxlength="1" required style="border: 1px solid black;">
+              <input type="text" class="otp-input" maxlength="1" required style="border: 1px solid black;">
+              <input type="text" class="otp-input" maxlength="1" required style="border: 1px solid black;">
+              <input type="text" class="otp-input" maxlength="1" required style="border: 1px solid black;">
+              <input type="text" class="otp-input" maxlength="1" required style="border: 1px solid black;">
+            </div>
+          </div>
+          <div class="resend-otp">
+            Didn't receive OTP? <button type="button" class="resend-btn">Resend</button>
+          </div>
+          <button type="submit" class="btn-primary">Verify OTP</button>
+        </form>
+      </div>
+
+      <!-- Step 3: User Type Selection (after OTP verified) -->
+      <div id="step-usertype" class="form-step">
+        <div class="verified-badge">
+          <span class="checkmark">✓</span>
+          <span>Email Verified</span>
+        </div>
+        
+      </div>
+
+      <div class="login-link">
+        Already have an account? <a href="index.html">Login</a>
+      </div>
+    </div>
+    <!--Right Section END-->
+  </div>
+</div>
+
+<script src="SignUp.js"></script>
+</body>
+</html>
